@@ -1,0 +1,10 @@
+<p>APPLICAZIONE F3K !!</p>
+{% if lista_utenti %}
+    <ul> 
+    {% for utente in lista_utenti %}
+        <li>{{utente.Cognome}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Non ci sono utenti iscritti</p>
+{% endif %}
