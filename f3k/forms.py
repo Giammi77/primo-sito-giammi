@@ -1,4 +1,5 @@
 from django import forms
 
-class IscrizioneForm(forms,Form):
-    Cognome = forms.CharField(label='Cognome',max_length=200)
+class Form_Iscrizione(forms.Form):
+    Cognome = forms.CharField(max_length=200)
+    Nome = forms.CharField(max_length=200)

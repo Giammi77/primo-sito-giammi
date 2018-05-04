@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from f3k import views
 
+app_name = 'f3k'
 urlpatterns = [
+    url(r'^iscrizione/$', views.get_Form_Iscrizione, name='iscrizione'),
     url(r'^$', views.index,name='index'),
 ]

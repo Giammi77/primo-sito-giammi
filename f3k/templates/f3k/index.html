@@ -1,10 +1,16 @@
-<p>APPLICAZIONE F3K !!</p>
+<p>APPLICAZIONE PER GESTIONE ISCRIZIONE GARA F3K !!</p><br>
+<p>ELENCO ISCRITTI:</p>
+
 {% if lista_utenti %}
     <ul> 
     {% for utente in lista_utenti %}
-        <li>{{utente.Cognome}}</li>
+        <li>{{utente.Cognome}}  {{utente.Nome}}</li>
     {% endfor %}
     </ul>
 {% else %}
     <p>Non ci sono utenti iscritti</p>
 {% endif %}
+<form action="{% url 'f3k:iscrizione'%}" method="get">
+    {% csrf_token %}
+    <input type="submit" value="NUOVA ISCRIZIONE" />
+</form>
